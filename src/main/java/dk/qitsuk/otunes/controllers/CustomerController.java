@@ -24,4 +24,9 @@ public class CustomerController {
         return customerDAO.getCustomerById(id);
     }
 
+    @GetMapping("/api/numCustomerCountry")
+    private Customer numCustomerCountry(@RequestParam int id) {
+        CustomerDAO customerDAO = new CustomerDAO();
+        return customerDAO.numCustomerCountry(id);
+    }
 }
